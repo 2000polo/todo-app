@@ -10,6 +10,7 @@
     height: 80vh;
     width: 70vw;
     background-color: rgb(66, 66, 66);
+    position: relative;
 }
 
 nav{
@@ -27,22 +28,43 @@ nav{
     margin-left: .6vw;  
 }
 
+.menu-icon-none{
+    pointer-events: none;
+}
+
+.todo-content-wrapper{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
 .left-menu-side-bar{
-    width: 20vw;
+    width: 30%;
     height: 100%;
     background-color: black;
     padding: 0 1vh;
+    position: static;
+    overflow-x: hidden;
+}
+
+.visible-sidebar{
+    display:none;
 }
 
 .menu-list-main-wrapper{
     width: 100%;
     height: auto;
+    
 }
 
 .list-wrapper{
     width: 100%;
     height: 100%;
-    padding: 2vh 0;
+    /* padding: 2vh 0; */
+}
+
+.back-arrow{
+    display: none;
 }
 
 .list-tile-wrapper{ 
@@ -63,6 +85,7 @@ nav{
 .overall-status-main-wrapper{
     width: 100%;
     height: auto;
+    margin: 20px 0;
 }
 
 .active-status-tile{
@@ -132,6 +155,50 @@ nav{
     text-align: center;
 }
 
+.todo-main-content-display-section{
+    width: 70%;
+    height: 100%;
+    padding: 1vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main-content-welcome-tile{
+    color: white;
+    background-color: black;
+    width: 100%;
+    padding: 1vh;
+    border-radius: 10px;
+}
+
+.main-content-welcome-tile h1{
+    font-size: 3rem;
+}
+
+.main-content-welcome-tile p {
+    font-size: .8rem;
+    font-weight: 200;
+}
+
+.todo-add-button-main-wrapper{
+    width: 100%;
+    height: 60px;
+}
+
+.btn-wrapper-position{
+    height: 60px;
+    width: 60px;
+    background-color: orange;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 @media only screen and (max-width: 1200px){
     .left-menu-side-bar{
@@ -141,17 +208,52 @@ nav{
 
 @media only screen and (max-width: 900px){
     
+    .home-main-wrapper{
+        align-items: flex-start;
+        height: 100vh;
+    }
+
     nav{
-        display: block
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .todo-content-wrapper{
+        height: auto;
     }
     
     .left-menu-side-bar{
-        display: none;
+        position: absolute;
+        width: 85%;
+        top: 0;
+        left: 0;
+        /* opacity: 0; */
+
+    }
+
+
+
+    .back-arrow{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 100%;
+        margin-right: 10px;
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(172, 172, 172, 0.247);
+        align-items: center;
     }
 
     .todo-main-wrapper{
         height: 100vh;
         width: 100vw;
         background-color: rgb(66, 66, 66);
+    }
+
+    .todo-main-content-display-section{
+        width: 100%;
+        height: 100%;
+        
     }
 }

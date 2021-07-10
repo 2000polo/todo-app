@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {Component, useState} from 'react';
 import Anime from 'react-anime';
 import './Home.css'
 import {BiMenu} from 'react-icons/bi';
@@ -11,7 +11,7 @@ import { HiPencil } from 'react-icons/hi'
 
 const Home = () =>{
 
-    const [slidemenu, setSlideMenu] = useState(true);
+    const [slidemenu, setSlideMenu] = useState(false);
 
     return (
         <div on className="home-main-wrapper">
@@ -30,12 +30,12 @@ const Home = () =>{
                 slidemenu === true &&
                 
                     <div className="left-menu-side-bar">
-                        <Anime  easing="easeInOutQuart"
+                        <Anime  easing="easeInOutBack"
                                 duration={500}
-                                direction="reverse"
+                                direction="normal"
                                 delay={(el, index) => index * 100}
-                                translateX='-300px'
-                                // opacity="1"
+                                translateX='600px'
+                                opacity="1"
                                 >
                         <div className="menu-list-main-wrapper">
                             <div className="list-wrapper">
@@ -103,18 +103,34 @@ const Home = () =>{
                     </div>
                     }
                     <div className="todo-main-content-display-section">
-                        <div className="main-content-welcome-tile">
-                            <h1>Hello!</h1>
-                            <p>Check all your Todo's</p>
-                        </div>
-
-                        <div className="todo-add-button-main-wrapper">
-                            <div className="btn-wrapper-position">
-                                <IconContext.Provider value={{size:"30px", color:"white"}} >
-                                    <HiPencil />
-                                </IconContext.Provider>
+                        <Anime easing="easeInOutExpo"
+                               duration={500}
+                               direction="reverse"  
+                               delay={(el, index) => index * 100}
+                               opacity="0"
+                               
+                               >
+                            <div className="main-content-welcome-tile">
+                                <h1>Hello!</h1>
+                                <p>Good Morning! Check all your Todo's</p>
                             </div>
-                        </div>
+                        </Anime>
+                        
+                            <div className="todo-add-button-main-wrapper">
+                            <Anime easing="easeOutBack"
+                               duration={500}
+                               direction="reverse"
+                               delay= {(el, index) => index * 100}
+                               opacity="0"
+                               >
+                                <div className="btn-wrapper-position">
+                                    <IconContext.Provider value={{size:"30px", color:"white"}} >
+                                        <HiPencil />
+                                    </IconContext.Provider>
+                                </div>
+                                </Anime>
+                            </div>
+                        
                     </div>
                 </div>
             </div>

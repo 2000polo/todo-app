@@ -1,4 +1,4 @@
-import React, {Component, useState} from 'react';
+import React, { useState} from 'react';
 import Anime from 'react-anime';
 import './Home.css'
 import {BiMenu} from 'react-icons/bi';
@@ -8,6 +8,9 @@ import { RiSettings3Fill } from 'react-icons/ri';
 import { IoStatsChart } from 'react-icons/io5';
 import { AiFillHome } from 'react-icons/ai';
 import { HiPencil } from 'react-icons/hi'
+import TodoCard from '../../Components/TodoCard/TodoCard';
+
+
 
 const Home = () =>{
 
@@ -110,28 +113,35 @@ const Home = () =>{
                                opacity="0"
                                
                                >
-                            <div className="main-content-welcome-tile">
-                                <h1>Hello!</h1>
-                                <p>Good Morning! Check all your Todo's</p>
-                            </div>
+                                <div className="main-content-welcome-tile">
+                                    <h1>Hello!</h1>
+                                    <p>Good Morning! Check all your Todo's</p>
+                                </div>
                         </Anime>
+
+                        <div className="todo-card-grid-main-wrapper">
+                            <div className="todo-grid">
+                                <TodoCard/>
+                            </div>
+                        </div>
                         
-                            <div className="todo-add-button-main-wrapper">
+                    </div>
+
+                    <div className="todo-add-button-main-wrapper">
                             <Anime easing="easeOutBack"
-                               duration={500}
-                               direction="reverse"
-                               delay= {(el, index) => index * 100}
-                               opacity="0"
-                               >
+                                duration={500}
+                                direction="reverse"
+                                delay= {(el, index) => index * 100}
+                                opacity="0"
+                                >
                                 <div className="btn-wrapper-position">
                                     <IconContext.Provider value={{size:"30px", color:"white"}} >
                                         <HiPencil />
                                     </IconContext.Provider>
                                 </div>
-                                </Anime>
-                            </div>
-                        
+                            </Anime>
                     </div>
+
                 </div>
             </div>
             

@@ -36,7 +36,7 @@ nav{
 
 .todo-content-wrapper{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     height: 100%;
 }
 
@@ -59,7 +59,7 @@ nav{
     overflow-x: hidden;
     /* background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.007),rgba(255, 255, 255, 0.007)); */
     background-color: #1f2128;
-    backdrop-filter: blur(10px);
+    box-shadow:0px 0px 10px 10px  #00000046;
     
 }
 
@@ -108,11 +108,11 @@ nav{
 .active-status-tile{
     width: 100%;
     height: 100px;
-    /* background-color: hotpink; */
-    background-image: linear-gradient(to left, rgba(232, 55, 255, 0.336),rgba(255, 255, 255, 0.5));
-    border-top: 1px solid white;
-    border-left: 1px solid white;
-    border-radius: 20px;
+    background-color: #309bff;
+    /* background-image: linear-gradient(to left, rgba(232, 55, 255, 0.336),rgba(255, 255, 255, 0.5)); */
+    /* border-top: 1px solid white;
+    border-left: 1px solid white; */
+    border-radius: 5px;
     color: white;
 }
 
@@ -146,16 +146,14 @@ nav{
 }
 
 .done-status-tile, .deleted-status-tile{
-    background-color: rgb(50, 146, 255);
-    border-radius: 20px;
+    /* background-color: #309bff; */
+    border: 1px solid #309bff;
+    border-radius: 5px;
     height: 100px;
     width: 49%;
-    margin: 10px 0;
+    margin: 5px 0;
     color: white;
-}
-
-.deleted-status-tile{
-    background-color: orange;
+    color: #309bff;
 }
 
 .status-tile-content{
@@ -178,18 +176,18 @@ nav{
 .todo-main-content-display-section{
     width: 100%;
     height: 100%;
-    /* padding: 0 2vw; */
-    margin: 0 1.3vw;
+    padding: 0 1.3vw;
+    /* margin: 0 1.3vw; */
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 
 .main-content-welcome-tile{
     color: white;
-    background-color: #ffb730;
+    background-color: #309bff;
     /* background-image: linear-gradient(to left, rgb(252, 168, 255),rgb(174, 74, 255)); */
-    box-shadow: 10px 22px 40px 10% #000000;
+    box-shadow:0px 0px 10px 10px  #00000046;
     opacity: 1;
     width: 100%;
     padding: 1vh;
@@ -205,16 +203,10 @@ nav{
     font-weight: 200;
 }
 
-.todo-add-button-main-wrapper{
-    width: 100%;
-    height: 60px;
-    
-}
-
 .btn-wrapper-position{
     height: 60px;
     width: 60px;
-    background-color: orange;
+    background-color: #309bff;
     position: absolute;
     right: 20px;
     bottom: 20px;
@@ -224,6 +216,7 @@ nav{
     justify-content: center;
     align-items: center;
     opacity: 1;
+    box-shadow:0px 0px 10px 10px  #00000046;
 }
 
 @media only screen and (max-width: 1200px){

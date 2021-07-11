@@ -9,7 +9,8 @@ import { IoStatsChart } from 'react-icons/io5';
 import { AiFillHome } from 'react-icons/ai';
 import { HiPencil } from 'react-icons/hi'
 import TodoCard from '../../Components/TodoCard/TodoCard';
-
+import AddPage from '../../Pages/AddPage/AddPage';
+// import {BrowserRouter,Route} from 'react-router-dom'
 
 
 const Home = () =>{
@@ -17,6 +18,7 @@ const Home = () =>{
     const [slidemenu, setSlideMenu] = useState(false);
 
     return (
+        // <BrowserRouter>
         <div on className="home-main-wrapper">
             <div className="todo-main-wrapper">
                 <nav>
@@ -143,9 +145,13 @@ const Home = () =>{
                     </div>
 
                 </div>
+                
+                    <AddPage />
+                
             </div>
             
         </div>
+        // </BrowserRouter>
     )
 }
 

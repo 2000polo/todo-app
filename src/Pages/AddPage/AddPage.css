@@ -1,0 +1,108 @@
+.add-page-main-wrapper{
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #1f2128;
+    width: 100%;
+    height: 100%;
+}
+
+.add-page-wrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-page{
+    height: 80%;
+    width: 40%;
+    background-color: #1f2128;
+    border: 1px solid #309bff;
+    border-radius: 5px;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.create-page-head{
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.todo-create-illustration{
+    height: 300px;
+    width: 100%;
+}
+
+#bb7c18d0-f456-47c2-8887-908615fa7d6e{
+    height: 130px;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.div-m-cont{
+    width: 100%;
+}
+
+.todo-add-field{
+    width: 100%;
+    height: 50px;
+    margin: 10px 0;
+}
+
+.todo-add-field input{
+    width: 100%;
+    height: 100%;
+    
+    background: none;
+    outline: none;
+    border: 1px solid #309bff;
+    padding: 0 10px;
+    color: white;
+    font-size: .99rem;
+    border-radius: 5px;
+}
+
+.btn-add{
+    width: 100%;
+    height: 50px;
+    background-color: #309bff;
+    /* border:1px solid #309bff; */
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.btn-add:hover{
+    background-color: #0171da;
+}
+
+.quote{
+    margin-top: 10px;
+    color: grey;
+    font-size: .8rem;
+}
+
+@media only screen and (max-width: 1300px){
+    .add-page{
+        width: 40%;
+    }
+}
+@media only screen and (max-width: 700px){
+    .add-page{
+        width: 96%;
+        height: 80%;
+    }
+}

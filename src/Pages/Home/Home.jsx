@@ -10,12 +10,17 @@ import { AiFillHome } from 'react-icons/ai';
 import { HiPencil } from 'react-icons/hi'
 import TodoCard from '../../Components/TodoCard/TodoCard';
 import AddPage from '../../Pages/AddPage/AddPage';
-// import {BrowserRouter,Route} from 'react-router-dom'
+import {Route, useHistory} from 'react-router-dom'
 
 
 const Home = () =>{
 
     const [slidemenu, setSlideMenu] = useState(false);
+    const history = useHistory();
+
+    const addPageHandler = () =>{
+        history.push("/addpage");
+    }
 
     return (
         // <BrowserRouter>
@@ -136,7 +141,7 @@ const Home = () =>{
                                 delay= {(el, index) => index * 100}
                                 opacity="0"
                                 >
-                                <div className="btn-wrapper-position">
+                                <div onClick={addPageHandler} className="btn-wrapper-position">
                                     <IconContext.Provider value={{size:"30px", color:"white"}} >
                                         <HiPencil />
                                     </IconContext.Provider>
@@ -145,8 +150,6 @@ const Home = () =>{
                     </div>
 
                 </div>
-                
-                    <AddPage />
                 
             </div>
             
